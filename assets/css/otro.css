@@ -1,0 +1,134 @@
+/*! CSS Used from: http://127.0.0.1:5501/assets/css/vendor.bundle.css?ver=200 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #0a58ca;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa-play:before {
+    content: "\f04b";
+}
+
+/*! CSS Used from: http://127.0.0.1:5501/assets/css/style.css?ver=200 */
+a {
+    outline: 0 none;
+    transition: all 0.5s;
+    color: #16a3fe;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    outline: 0;
+    color: #23c99d;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nk-block-video-play {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nk-block-video {
+    overflow: hidden;
+}
+
+.btn-play {
+    position: relative;
+    color: #fff;
+    height: 60px;
+    width: 60px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 58px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid currentColor;
+}
+
+.btn-play:after {
+    position: absolute;
+    content: "";
+    height: calc(100% + 16px);
+    width: calc(100% + 16px);
+    top: -8px;
+    left: -8px;
+    border-radius: 50%;
+    border: 1px solid rgba(65, 80, 118, 0.35);
+    animation: 1s ease 0s normal none infinite running playbutton;
+}
+
+.btn-play:hover,
+.btn-play:focus {
+    color: #23c99d !important;
+}
+
+@media (min-width: 576px) {
+    .btn-play {
+        height: 80px;
+        width: 80px;
+        font-size: 18px;
+        line-height: 78px;
+    }
+}
+
+.nk-block-video {
+    position: relative;
+    border-radius: 4px;
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url("http://127.0.0.1:5501/assets/fonts/fa-regular-400.eot");
+    src: url("http://127.0.0.1:5501/assets/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("http://127.0.0.1:5501/assets/fonts/fa-regular-400.woff2") format("woff2"), url("http://127.0.0.1:5501/assets/fonts/fa-regular-400.woff") format("woff"), url("http://127.0.0.1:5501/assets/fonts/fa-regular-400.ttf") format("truetype"), url("http://127.0.0.1:5501/assets/fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("http://127.0.0.1:5501/assets/fonts/fa-solid-900.eot");
+    src: url("http://127.0.0.1:5501/assets/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("http://127.0.0.1:5501/assets/fonts/fa-solid-900.woff2") format("woff2"), url("http://127.0.0.1:5501/assets/fonts/fa-solid-900.woff") format("woff"), url("http://127.0.0.1:5501/assets/fonts/fa-solid-900.ttf") format("truetype"), url("http://127.0.0.1:5501/assets/fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
