@@ -3775,7 +3775,7 @@ h6 {
 }
 
 .token-stage-pre {
-    background: #6655df;
+    background: var(--color65);
 }
 
 .token-stage-one {
