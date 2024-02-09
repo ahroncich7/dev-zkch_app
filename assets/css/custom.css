@@ -1,6 +1,149 @@
+/* PALLETTE  */
+
+:root {
+    --color1: #415076;
+    --color2: #3221ad;
+    --color3: #fff;
+    --color4: #07bcff;
+    --color5: #7a5cff;
+    --color6: #12183a;
+    --color7: #e4e1ff;
+    --color8: #026bfb;
+    --color9: #f6be26;
+    --color10: #39d884;
+    --color11: #e6604a;
+    --color12: #a89ffe;
+    --color13: rgba(255, 255, 255, 0.6);
+    --color14: #0b0c10;
+    --color15: #eff6ff;
+    --color16: rgba(239, 246, 255, 0.7);
+    --color17: #e7edf5;
+    --color18: rgba(231, 237, 245, 0.7);
+    --color19: var(--color58);
+    --color20: rgba(22, 11, 109, 0.7);
+    --color21: rgba(29, 14, 138, 0.7);
+    --color22: rgba(0, 0, 0, 0.15);
+    --color23: #a722f4;
+    --color24: var(--color60);
+    --color25: var(--color61);
+    --color26: rgba(50, 33, 173, 0.7);
+    --color27: rgba(62, 43, 197, 0.7);
+    --color28: #d1e0f6;
+    --color29: #dbe4f7;
+    --color30: #f4f7fd;
+    --color31: #394995;
+    --color32: #9ac4fd;
+    --color33: #fbe5a8;
+    --color34: #b0efce;
+    --color35: #f5bfb7;
+    --color36: #0d1b61;
+    --color37: #0C0E24;
+    --color38: #f0f6ff;
+    --color39: #28298a;
+    --color40: #102486;
+    --color41: #1d5ecf;
+    --color42: #1b5ed1;
+    --color43: #142692;
+    --color44: #0075a0;
+    --color45: #aae8ff;
+    --color46: #6dd8ff;
+    --color47: #0087ba;
+    --color48: #2d00f5;
+    --color49: #3c10ff;
+    --color50: #29cf77;
+    --color51: #cef5e1;
+    --color52: #64e09e;
+    --color53: #25b96b;
+    --color55: #0f084d;
+    --color56: #4a36d3;
+    --color57: rgba(50, 33, 173, 0.8);
+    --color58: #160B6D;
+    --color59: #6454da;
+    --color60: #3E2BC5;
+    --color61: #1D0E8A;
+    --color62: #5D4BD8;
+    --color63: #301FA4;
+    --color64: #3423B6;
+
+
+
+}
+
+
+:root {
+    --color1: #754254;
+    --color2: #AD2134;
+    --color3: #fff;
+    --color4: #1cff08;
+    --color5: #deff5c;
+    --color6: #12183a;
+    --color7: #e4e1ff;
+    --color8: #026bfb;
+    --color9: #f6be26;
+    --color10: #39d884;
+    --color11: #e6604a;
+    --color12: #a89ffe;
+    --color13: rgba(255, 255, 255, 0.6);
+    --color14: #0b0c10;
+    --color15: #eff6ff;
+    --color16: rgba(239, 246, 255, 0.7);
+    --color17: #e7edf5;
+    --color18: rgba(231, 237, 245, 0.7);
+    --color19: var(--color58);
+    --color20: rgba(22, 11, 109, 0.7);
+    --color21: rgba(29, 14, 138, 0.7);
+    --color22: rgba(0, 0, 0, 0.15);
+    --color23: #22f433;
+    --color24: var(--color60);
+    --color25: var(--color61);
+    --color26: rgba(50, 33, 173, 0.7);
+    --color27: rgba(197, 43, 71, 0.7);
+    --color28: #d1e0f6;
+    --color29: #dbe4f7;
+    --color30: #f4f7fd;
+    --color31: #394995;
+    --color32: #9ac4fd;
+    --color33: #fbe5a8;
+    --color34: #b0efce;
+    --color35: #f5bfb7;
+    --color36: #0d1b61;
+    --color37: #0C0E24;
+    --color38: #f0f6ff;
+    --color39: #28298a;
+    --color40: #102486;
+    --color41: #1d5ecf;
+    --color42: #1b5ed1;
+    --color43: #142692;
+    --color44: #0075a0;
+    --color45: #aae8ff;
+    --color46: #6dd8ff;
+    --color47: #0087ba;
+    --color48: #2d00f5;
+    --color49: #3c10ff;
+    --color50: #29cf77;
+    --color51: #cef5e1;
+    --color52: #64e09e;
+    --color53: #25b96b;
+    --color55: #4D0808;
+    --color56: #36d3be;
+    --color57: rgba(33, 173, 105, 0.8);
+    --color58: #6d0b0b;
+    --color59: #da5471;
+    --color60: #c52b3a;
+    --color61: #8a0e2d;
+    --color62: #5D4BD8;
+    --color63: #301FA4;
+    --color64: #3423B6;
+
+}
+
+
+
+
+
 .city-img {
     filter: brightness(65%);
-  
+
 }
 
 .coin-img {

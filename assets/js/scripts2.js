@@ -821,11 +821,11 @@ NioApp = function (NioApp, $, window, document) {
         if ($particles_bg.exists()) {
             $particles_bg.each(function(){
                 var $self = $(this), $self_id = $self.attr('id'),
-                    _pt_base        = ($self.data('pt-base')) ? $self.data('pt-base') : '#fff', 
+                    _pt_base        = ($self.data('pt-base')) ? $self.data('pt-base') : 'var(--color3)', 
                     _pt_base_op     = ($self.data('pt-base-op')) ? parseFloat($self.data('pt-base-op')) : 0.10, 
-                    _pt_shape       = ($self.data('pt-shape')) ? $self.data('pt-shape') : '#fff', 
+                    _pt_shape       = ($self.data('pt-shape')) ? $self.data('pt-shape') : 'var(--color3)', 
                     _pt_shape_op    = ($self.data('pt-shape-op')) ? parseFloat($self.data('pt-shape-op')) : 0.10, 
-                    _pt_line        = ($self.data('pt-line')) ? $self.data('pt-line') : '#fff',
+                    _pt_line        = ($self.data('pt-line')) ? $self.data('pt-line') : 'var(--color3)',
                     _pt_line_op     = ($self.data('pt-line-op')) ? parseFloat($self.data('pt-line-op')) : 0.20;
                 
                 particlesJS($self_id, {
