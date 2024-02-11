@@ -2,32 +2,42 @@
 
 :root {
     --color1: #415076;
-    --color2: #3221ad;                      /*DARK ICON*/
-    --color3: #fff;                         /*LIGHT TEXT*/
-    --color4: #07bcff;                      /*MAIN CONTRAST*/
-    --color5: #7a5cff;                      /*MAIN BG LIGHT*/
+    --color2: #3221ad;
+    /*DARK ICON*/
+    --color3: #fff;
+    /*LIGHT TEXT*/
+    --color4: #07bcff;
+    /*MAIN CONTRAST*/
+    --color5: #7a5cff;
+    /*MAIN BG LIGHT*/
     --color6: #12183a;
-    --color7: #e4e1ff;                       /*THEME TEXT CONTRAST LIGHT*/
+    --color7: #e4e1ff;
+    /*THEME TEXT CONTRAST LIGHT*/
     --color8: #026bfb;
     --color9: #f6be26;
     --color10: #39d884;
     --color11: #e6604a;
-    --color12: #a89ffe;                     /*THEME TEXT CONTRAST*/
+    --color12: #a89ffe;
+    /*THEME TEXT CONTRAST*/
     --color13: rgba(255, 255, 255, 0.6);
     --color14: #0b0c10;
     --color15: #eff6ff;
     --color16: rgba(239, 246, 255, 0.7);
     --color17: #e7edf5;
     --color18: rgba(231, 237, 245, 0.7);
-    --color19: #160B6D;                     /*BODY BG*/
+    --color19: #160B6D;
+    /*BODY BG*/
     --color20: rgba(22, 11, 109, 0.7);
     --color21: rgba(29, 14, 138, 0.7);
     --color22: rgba(0, 0, 0, 0.15);
     --color23: #a722f4;
-    --color24: #3E2BC5;                    /*DARK ALT BG*/
-    --color25: #1D0E8A;                      /*DARK ALT BG 2*/
+    --color24: #3E2BC5;
+    /*DARK ALT BG*/
+    --color25: #1D0E8A;
+    /*DARK ALT BG 2*/
     --color26: rgba(50, 33, 173, 0.7);
-    --color27: rgba(62, 43, 197, 0.7);       /*DARK ALT BG 3*/
+    --color27: rgba(62, 43, 197, 0.7);
+    /*DARK ALT BG 3*/
     --color28: #d1e0f6;
     --color29: #dbe4f7;
     --color30: #f4f7fd;
@@ -45,6 +55,7 @@
     --color42: #1b5ed1;
     --color43: #142692;
     --color44: #0075a0;
+    /*OPACY LINE*/
     --color45: #aae8ff;
     --color46: #6dd8ff;
     --color47: #0087ba;
@@ -54,17 +65,21 @@
     --color51: #cef5e1;
     --color52: #64e09e;
     --color53: #25b96b;
-    --color55: #0f084d;                        /* STICKY HEADER BG */
+    --color55: #0f084d;
+    /* STICKY HEADER BG */
     --color56: #4a36d3;
-    --color57: rgba(50, 33, 173, 0.8);         /*THEME CONTRAST LIGTH*/  
+    --color57: rgba(50, 33, 173, 0.8);
+    /*THEME CONTRAST LIGTH*/
     --color58: var(--color19);
-    --color59: #6454da;                        /*THEME CONTRAST LIGTH*/
+    --color59: #6454da;
+    /*THEME CONTRAST LIGTH*/
     --color60: var(--color24);
     --color61: var(--color25);
     --color62: #5D4BD8;
     --color63: #301FA4;
     --color64: #3423B6;
-    --color65: #6655df;                        /*THEME CONTRAST LIGTH 2*/
+    --color65: #6655df;
+    /*THEME CONTRAST LIGTH 2*/
 
 
 
@@ -89,4 +104,32 @@
     transition: transform 0.40s ease-out;
 }
 
-.coin-img:hover {}
+
+#roadmap-token .token-stage {
+    min-width: 25%;
+    max-width: 250px;
+}
+
+#roadmap-token .token-stage.done {
+    box-shadow: 0px 0px 20px 5px white;
+}
+
+#roadmap-token .token-stage.coming {
+    filter: brightness(0.75);
+}
+
+
+.vl {
+    border-left: 6px solid var(--color4);
+    height: 150px;
+    width: 6px;
+    left: 50%;
+    margin: auto;
+    transform: translate(-3px, 0);
+}
+
+.vl.coming {
+    border-left: 4px solid var(--color44);
+    width: 4px;
+    transform: translate(-2px, 0);
+}

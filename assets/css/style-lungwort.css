@@ -5295,7 +5295,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .token-stage-title { color: var(--color3); background: var(--color62); text-transform: uppercase; font-weight: 700; line-height: 26px; padding: 10px; border-radius: 6px 6px 0 0; }
 
-.token-stage-pre { background: var(--color65); }
+.token-stage-pre { background: #6655df; }
 
 .token-stage-one { background: #5744db; }
 
