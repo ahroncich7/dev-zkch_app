@@ -89,6 +89,10 @@
 
 
 
+.poster h2 {
+    margin-bottom: -10%!important;
+}
+
 .city-img {
     filter: brightness(65%);
 
@@ -97,7 +101,7 @@
 .coin-img {
     width: 20%;
     height: auto;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(0 0 50px rgb(0, 0, 0, 1));
