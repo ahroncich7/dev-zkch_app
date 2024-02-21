@@ -1669,12 +1669,12 @@ h6 {
 
 .link-primary:hover,
 .link-primary:focus {
-    color: #9f8aff !important;
+    color: var(--color66) !important;
 }
 
 .link-primary:hover .link-icon.icon-circle,
 .link-primary:focus .link-icon.icon-circle {
-    background: #9f8aff;
+    background: var(--color66);
 }
 
 @media (min-width: 420px) {

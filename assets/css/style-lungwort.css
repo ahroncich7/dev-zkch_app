@@ -2056,9 +2056,9 @@ hr { position: relative; z-index: 5; }
 
 .link-primary .link-icon.icon-circle { background: var(--color4); color: var(--color3) !important; }
 
-.link-primary:hover, .link-primary:focus { color: #9f8aff !important; }
+.link-primary:hover, .link-primary:focus { color: var(--color66) !important; }
 
-.link-primary:hover .link-icon.icon-circle, .link-primary:focus .link-icon.icon-circle { background: #9f8aff; }
+.link-primary:hover .link-icon.icon-circle, .link-primary:focus .link-icon.icon-circle { background: var(--color66); }
 
 .link-light { color: var(--color1) !important; }
 
