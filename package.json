@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "purgecss": "^5.0.0"
+  },
+  "dependencies": {
+    "atropos": "^2.0.2"
   }
 }

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=200">
     <link rel="stylesheet" href="assets/css/style-lungwort.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="node_modules/atropos/atropos.css" />
 </head>
 
 <body class="nk-body body-wider theme-dark mode-onepage">
@@ -29,7 +30,7 @@
                                 <img class="logo-dark" src="./assets/logos/01.png" srcset="images/logo2x.png 2x"
                                     alt="logo">
                                 <img class="logo-light" src="./assets/logos/01.png"
-                                    srcset="images/logo-full-white2x.png 2x" alt="logo">
+                                    srcset="./assets/logos/01.png" alt="logo">
                             </a>
                         </div>
                         <!-- Menu Toogle @s -->
@@ -88,8 +89,8 @@
                                     <div class="col-xl-6 col-lg-5 order-lg-last">
                                         <div class="banner-gfx banner-gfx-re-s2 animated m-auto" data-animate="fadeInUp"
                                             data-delay="1.25">
-                                            <div class="token-status token-status-s2 animated m-auto" data-animate="fadeInUp"
-                                                data-delay="1.65">
+                                            <div class="token-status token-status-s2 animated m-auto"
+                                                data-animate="fadeInUp" data-delay="1.65">
                                                 <div class="token-box token-box-s2 round">
                                                     <h5 class="title title-xs-alt fw-6">PRE SALE STARTING IN</h5>
                                                     <div class="countdown-s3 countdown-s4 countdown neon-text"
@@ -135,7 +136,7 @@
                                                             <span>What is it?</span></a></li>
                                                 </ul>
                                             </div>
-                                            
+
                                         </div>
                                     </div><!-- .col -->
                                 </div><!-- .row -->
@@ -150,6 +151,7 @@
             <!-- .header-banner @e -->
         </header>
         <main class="nk-pages">
+
 
             <!-- VIDEO -->
             <section class="section tc-light py-0" id="main-video">
@@ -210,10 +212,34 @@
 
                 </div>
                 <div class="poster text-center">
-                    <h2 class="title title-semibold animated" data-animate="fadeInUp" data-delay=".2">Augmented Ads
-                    </h2>
-                    <img src="assets/images/bg_city.png" class="img-fluid city-img" alt="...">
-                    <img src="assets/images/K$.png" class="img-fluid position-absolute coin-img" alt="...">
+
+                    <div class="atropos cont-atropos city-bg">
+                        <!-- scale container (required) -->
+                        <div class="atropos-scale">
+                            <!-- rotate container (required) -->
+                            <div class="atropos-rotate">
+                                <!-- inner container (required) -->
+                                <div class="atropos-inner d-flex">
+                                    <h2 class="title title-semibold animated" data-atropos-offset="5"
+                                        data-animate="fadeInUp" data-delay=".2">
+                                        
+                                    </h2>
+                                    <div class="neon-text position-absolute poster-text1 d-block d-md-none" data-atropos-offset="10"><h4 class="h4">WELCOME</h4></div>
+                                    <div class="neon-text position-absolute poster-text1 d-none d-md-block" data-atropos-offset="10"><h2 class="h2">WELCOME</h2></div>
+                                    <div class="neon-text position-absolute poster-text2 d-block d-md-none" data-atropos-offset="-3"><h4 class="h4">TO THE FUTURE</h4></div>
+                                    <div class="neon-text position-absolute poster-text2 d-none d-md-block" data-atropos-offset="-3"><h2 class="h2">TO THE FUTURE</h2></div>
+                                    <div class="neon-text position-absolute poster-text3 d-block d-md-none" data-atropos-offset="2"><h4 class="h4">OF ADS</h4></div>
+                                    <div class="neon-text position-absolute poster-text3 d-none d-md-block" data-atropos-offset="2"><h2 class="h2">OF ADS</h2></div>
+                                    <img src="assets/images/bg_city_layer1.png" class="img atropos-el-1"
+                                        data-atropos-offset="-5" />
+                                    <img src="assets/images/bg_city_layer2.png" class="img atropos-el-1"
+                                        data-atropos-offset="-8" />
+                                    <img src="assets/images/bg_city_layer3.png" class="img atropos-el-1"
+                                        data-atropos-offset="5" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -324,8 +350,8 @@
                         </div>
                         <div class="col-lg-7">
                             <div class="accordion" id="faq-37">
-                                <div class="accordion-item accordion-item-s3 light-shadow current animated" data-animate="fadeInUp"
-                                    data-delay=".5">
+                                <div class="accordion-item accordion-item-s3 light-shadow current animated"
+                                    data-animate="fadeInUp" data-delay=".5">
                                     <h5 class="accordion-title accordion-title-sm" data-bs-toggle="collapse"
                                         data-bs-target="#faq-37-1" aria-expanded="true">What is ICO Crypto? <span
                                             class="accordion-icon accordion-icon-s1"></span></h5>
@@ -337,8 +363,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item accordion-item-s3 light-shadow animated" data-animate="fadeInUp"
-                                    data-delay=".6">
+                                <div class="accordion-item accordion-item-s3 light-shadow animated"
+                                    data-animate="fadeInUp" data-delay=".6">
                                     <h5 class="accordion-title accordion-title-sm collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#faq-37-2" aria-expanded="false">What cryptocurrencies can I use
                                         to purchase? <span class="accordion-icon accordion-icon-s1"></span></h5>
@@ -350,8 +376,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item accordion-item-s3 light-shadow animated" data-animate="fadeInUp"
-                                    data-delay=".7">
+                                <div class="accordion-item accordion-item-s3 light-shadow animated"
+                                    data-animate="fadeInUp" data-delay=".7">
                                     <h5 class="accordion-title accordion-title-sm collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#faq-37-3" aria-expanded="false">How can I participate in the
                                         ICO Token sale? <span class="accordion-icon accordion-icon-s1"></span></h5>
@@ -363,8 +389,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item accordion-item-s3 light-shadow animated" data-animate="fadeInUp"
-                                    data-delay=".8">
+                                <div class="accordion-item accordion-item-s3 light-shadow animated"
+                                    data-animate="fadeInUp" data-delay=".8">
                                     <h5 class="accordion-title accordion-title-sm collapsed" data-bs-toggle="collapse"
                                         data-bs-target="#faq-37-4" aria-expanded="false">How do I benefit from the ICO
                                         Token? <span class="accordion-icon accordion-icon-s1"></span></h5>
@@ -409,10 +435,11 @@
                                         <img src="images/icons/icon-a-dark.png" alt="feature">
                                     </div>
                                     <div class="feature-text feature-text-s8">
-                                        <h4 class="title title-sm title-thin title-s5 neon-text"><span>Ultra Fast &amp; Secure
+                                        <h4 class="title title-sm title-thin title-s5 neon-text"><span>Ultra Fast &amp;
+                                                Secure
                                             </span>Instant Private Transaction</h4>
                                         <p>Millions of datasets indexedin culpa qui officia id est laborum</p>
-                                        
+
                                     </div>
                                 </div>
                             </div><!-- .col -->
@@ -426,7 +453,7 @@
                                         <h4 class="title title-sm title-thin title-s5 neon-text"><span>Highly Scalable
                                             </span>Limitless Applications</h4>
                                         <p>Millions of datasets indexedin culpa qui officia id est laborum</p>
-                                        
+
                                     </div>
                                 </div>
                             </div><!-- .col -->
@@ -437,10 +464,11 @@
                                         <img src="images/icons/icon-c-dark.png" alt="feature">
                                     </div>
                                     <div class="feature-text feature-text-s8">
-                                        <h4 class="title title-sm title-thin title-s5 neon-text"><span>Reliable &amp; Low Cost
+                                        <h4 class="title title-sm title-thin title-s5 neon-text"><span>Reliable &amp;
+                                                Low Cost
                                             </span>Instant Private Transaction</h4>
                                         <p>Millions of datasets indexedin culpa qui officia id est laborum</p>
-                                        
+
                                     </div>
                                 </div>
                             </div><!-- .col -->
@@ -1835,6 +1863,7 @@
     <!-- Preloader -->
     <div class="preloader"><span class="spinner spinner-round"></span></div>
     <!-- JavaScript -->
+    <script src="node_modules/atropos/atropos.min.js"></script>
     <script src="assets/js/jquery.bundle.js?ver=200"></script>
     <script src="assets/js/scripts.js?ver=200"></script>\
     <script src="assets/js/myScript.js"></script>\
