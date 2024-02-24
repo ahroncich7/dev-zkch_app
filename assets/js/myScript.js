@@ -47,3 +47,14 @@ const myAtropos = Atropos({
     // rest of parameters
 });
 
+
+
+// METAMASK
+
+
+const connectWallet = () => {
+    let accountsPromise = window.ethereum.request({ method: 'eth_requestAccounts' })
+    accountsPromise.then(wallet => document.querySelectorAll(".wallet-adress").forEach(el => el.innerText = wallet))
+}
+
+document.getElementById("connect-wallet-btn").addEventListener("click", connectWallet)
