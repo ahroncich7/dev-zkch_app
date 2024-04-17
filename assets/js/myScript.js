@@ -58,3 +58,5 @@ const connectWallet = () => {
 }
 
 document.getElementById("connect-wallet-btn").addEventListener("click", connectWallet)
+
+

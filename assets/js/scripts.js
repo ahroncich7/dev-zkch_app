@@ -385,6 +385,40 @@ kchApp = function (kchApp, $, window, document) {
     };
     kchApp.components.winLoad.push(kchApp.Util.scrollAnimation);
 
+
+    //hoverAnimated
+    kchApp.Util.hoverAnimation = function () {
+        var $animated = $('.hoverAnimated');
+        if ($animated) {
+            $animated.each(function () {
+                var anim = $(this), typ = anim.data("animate"), dur = anim.data("duration"), dly = anim.data("delay");
+                // anim.on('mouseenter', () => {
+                //     console.log("over");
+                //     anim.addClass("animated " + typ).css("visibility", "visible");
+                //     if (dur) {
+                //         anim.css('animation-duration', dur + 's');
+                //     }
+                //     if (dly) {
+                //         anim.css('animation-delay', dly + 's');
+                //     }
+                // })
+                anim.on('mouseenter', () => {
+                    anim.addClass("col-md-6 ");
+                    anim.children('p').css("fontSize", "20px")
+                    
+                })
+                anim.on('mouseleave', () => {
+                    anim.removeClass("col-md-6 ");
+                    anim.children('p').css("fontSize", "15px")
+
+                })
+            })
+        }
+    };
+    kchApp.components.winLoad.push(kchApp.Util.hoverAnimation);
+
+
+
     // Mainmenu/Nav @v1.0
     kchApp.MainMenu = function () {
         var $navbar_toggle = $('.navbar-toggle'),

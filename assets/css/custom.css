@@ -361,3 +361,35 @@ h6 {
         height: 36px;
     }
 }
+
+/* END VIDEO */
+
+
+/* PARTNERS */
+
+.partner-logo-s2, .partner-logo-s3{
+    width: fit-content;
+}
+
+/* END PARTNERS */
+
+
+
+/* ANIMATIONS */
+
+.hoverAnimated{
+}
+
+@keyframes overColX {
+    /* from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 40px, 0);
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    } */
+}
