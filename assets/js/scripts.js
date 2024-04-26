@@ -405,7 +405,7 @@ kchApp = function (kchApp, $, window, document) {
                 anim.on('mouseenter', () => {
                     anim.addClass("col-md-6 ");
                     anim.children('p').css("fontSize", "20px")
-                    
+
                 })
                 anim.on('mouseleave', () => {
                     anim.removeClass("col-md-6 ");
@@ -1048,6 +1048,39 @@ kchApp = function (kchApp, $, window, document) {
     };
     kchApp.components.docReady.push(kchApp.Plugins.dataTable);
 
+
+    // roadMapAnimation
+    kchApp.Util.roadMapAnimation = function () {
+        var container = $('#scrollable-container');
+        var clickedScroll = false;
+        const lastDoneStep = $('#last-done');
+        const stepTop = lastDoneStep.offset().top;
+        var divHeight = container.height();
+        console.log(divHeight)
+        console.log(stepTop)
+        console.log(container.offset().top)
+        container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
+        container.scrollTop();
+
+
+        container.on('click', function (event) {
+            var scrollAmount = divHeight / 2;
+            var clickY = event.offsetY
+            console.log(clickY)
+            var currentContTop = container.scrollTop();
+            clickedScroll = true
+            if (clickY > divHeight / 2) {
+                // Se hizo clic en la mitad superior del div
+                container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
+                clickedScroll = false;
+            } else {
+                // Se hizo clic en la mitad inferior del div
+                container.get(0).scroll({ top: currentContTop - scrollAmount, behavior: 'smooth' });
+            }
+            clickedScroll = false;
+        });
+    };
+    kchApp.components.docReady.push(kchApp.Util.roadMapAnimation);
 
     return kchApp;
 }(kchApp, jQuery, window, document);

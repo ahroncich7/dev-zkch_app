@@ -60,3 +60,19 @@ const connectWallet = () => {
 document.getElementById("connect-wallet-btn").addEventListener("click", connectWallet)
 
 
+
+
+VANTA.FOG({
+    el: "#roadmap-token",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0x06517B,
+    midtoneColor: 0x69136F,
+    lowlightColor: 0x460A0A,
+    baseColor: 0x0,
+    blurFactor: 1,
+    speed: 2.30
+})

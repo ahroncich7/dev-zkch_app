@@ -109,6 +109,7 @@
     --color57: #4c5c96;
     --color24: #06517B;
     --color25: #075885;
+    --black: #150303;
 }
 
 
@@ -143,6 +144,8 @@
 }
 
 
+/* ROADMAP */
+
 #roadmap-token .token-stage {
     min-width: 25%;
     max-width: 250px;
@@ -156,6 +159,47 @@
     filter: brightness(0.75);
 }
 
+#roadmap-token #scrollable-container {
+    scroll-snap-type: y mandatory;
+    min-height: 400px;
+    max-height: 150vh;
+
+
+    --mask:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            /* Transparencia al 20% del contenedor desde arriba */
+            rgba(0, 0, 0, 1) 50%,
+            /* Color sólido en el centro del contenedor */
+            rgba(0, 0, 0, 0) 100%);
+    /* Transparencia al 80% del contenedor desde abajo */
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+#roadmap-token #scrollable-container::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+}
+
+#roadmap-token .token-stage {
+    scroll-snap-align: center;
+}
+
+#roadmap-token #scrollable-container::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* background-image: url("../images/backgroundGrad.png"); */
+    /* background: linear-gradient(0deg, var(--color24) 0%, rgba(0, 0, 0, 0) 27%, rgba(0, 0, 0, 0) 61%, var(--color24)100%); */
+}
+
+
+/* END ROADMAP */
 
 .vl {
     border-left: 6px solid var(--color4);
@@ -212,15 +256,14 @@ h6 {
 }
 
 .bg-dark {
-    background: rgb(128, 27, 155);
-    background: radial-gradient(circle at top, rgba(128, 27, 155, 1) 3%, rgba(230, 69, 70, 1) 25%, rgba(0, 0, 0, 1) 80%);
+    background-color: var(--black)!important;
 }
 
-.wallet-adress{
+.wallet-adress {
     direction: rtl;
 }
 
-.wallet-btn{
+.wallet-btn {
     max-width: 200px;
 }
 
@@ -344,7 +387,7 @@ h6 {
 
 /* VIDEO */
 
-.nk-block-video img{
+.nk-block-video img {
     max-width: 100%;
 }
 
@@ -367,7 +410,8 @@ h6 {
 
 /* PARTNERS */
 
-.partner-logo-s2, .partner-logo-s3{
+.partner-logo-s2,
+.partner-logo-s3 {
     width: fit-content;
 }
 
@@ -377,8 +421,7 @@ h6 {
 
 /* ANIMATIONS */
 
-.hoverAnimated{
-}
+.hoverAnimated {}
 
 @keyframes overColX {
     /* from {
