@@ -762,7 +762,7 @@ kchApp = function (kchApp, $, window, document) {
                                 var type = (data.result === 'error') ? 'alert-danger' : 'alert-success';
                                 _result.removeClass('alert-danger alert-success').addClass('alert ' + type).html(data.message).slideDown(400);
                                 if (data.result !== 'error') { $(form).clearForm().find('input').removeClass('input-focused'); }
-                            }
+                            },
                         });
                     }
                 });
