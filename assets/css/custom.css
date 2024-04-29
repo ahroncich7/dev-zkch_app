@@ -144,6 +144,16 @@
 }
 
 
+
+
+/* NAVBAR */
+.is-dark .header-navbar::before{
+    background: var(--color5)!important;
+}
+
+/* END NAVBAR */
+
+
 /* ROADMAP */
 
 #roadmap-token .token-stage {
