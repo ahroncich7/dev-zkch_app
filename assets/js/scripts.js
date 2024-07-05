@@ -1049,38 +1049,68 @@ kchApp = function (kchApp, $, window, document) {
     kchApp.components.docReady.push(kchApp.Plugins.dataTable);
 
 
-    // roadMapAnimation
     kchApp.Util.roadMapAnimation = function () {
         var container = $('#scrollable-container');
         var clickedScroll = false;
         const lastDoneStep = $('#last-done');
         const stepTop = lastDoneStep.offset().top;
         var divHeight = container.height();
-        console.log(divHeight)
-        console.log(stepTop)
-        console.log(container.offset().top)
+        var scrollAmount = divHeight / 2;
+        var currentContTop = container.scrollTop();
+    
+        // Configuración inicial del scroll
         container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
         container.scrollTop();
-
-
-        container.on('click', function (event) {
-            var scrollAmount = divHeight / 2;
-            var clickY = event.offsetY
-            console.log(clickY)
-            var currentContTop = container.scrollTop();
-            clickedScroll = true
-            if (clickY > divHeight / 2) {
-                // Se hizo clic en la mitad superior del div
+    
+        // Función de animación de desplazamiento
+        function autoScroll() {
+            setTimeout(() => {
                 container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
-                clickedScroll = false;
+            }, 500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 2, behavior: 'smooth' });
+            }, 1500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 3, behavior: 'smooth' });
+            }, 2500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 4, behavior: 'smooth' });
+            }, 3500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 5, behavior: 'smooth' });
+            }, 4500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 6, behavior: 'smooth' });
+            }, 5500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 7, behavior: 'smooth' });
+            }, 6500);
+        }
+    
+        // Disparar la animación cuando el contenedor entra en la vista
+        container.waypoint(function (direction) {
+            if (direction === 'down') {
+                autoScroll();
+            }
+        }, { offset: '100%' });
+    
+        // Manejar clics para desplazamiento manual
+        container.on('click', function (event) {
+            currentContTop = container.scrollTop();
+            var clickY = event.offsetY;
+            clickedScroll = true;
+            if (clickY > divHeight / 2) {
+                container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
             } else {
-                // Se hizo clic en la mitad inferior del div
                 container.get(0).scroll({ top: currentContTop - scrollAmount, behavior: 'smooth' });
             }
             clickedScroll = false;
         });
     };
+    
+    // Añadir la función al array de docReady
     kchApp.components.docReady.push(kchApp.Util.roadMapAnimation);
+    
 
     return kchApp;
 }(kchApp, jQuery, window, document);

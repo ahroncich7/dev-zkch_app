@@ -236,7 +236,7 @@
 
 .vl {
     border-left: 6px solid var(--color4);
-    height: 150px;
+    height: 200px;
     width: 6px;
     left: 50%;
     margin: auto;
@@ -346,6 +346,15 @@ h6 {
         0 0 7px #fff,
         0 0 14px #fff,
         0 0 21px rgb(187, 0, 255);
+    padding: 0.5rem;
+}
+
+.neon-text-active.active {
+    color: #fff;
+    text-shadow:
+        0 0 0px #fff,
+        0 0 14px #fff,
+        0 0 21px rgba(187, 0, 255);
     padding: 0.5rem;
 }
 
