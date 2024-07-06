@@ -1059,7 +1059,7 @@ kchApp = function (kchApp, $, window, document) {
         var currentContTop = container.scrollTop();
     
         // Configuración inicial del scroll
-        container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
+        // container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
         container.scrollTop();
     
         // Función de animación de desplazamiento
@@ -1085,6 +1085,9 @@ kchApp = function (kchApp, $, window, document) {
             setTimeout(() => {
                 container.get(0).scroll({ top: currentContTop + scrollAmount * 7, behavior: 'smooth' });
             }, 6500);
+            setTimeout(() => {
+                container.get(0).scroll({ top: currentContTop + scrollAmount * 8, behavior: 'smooth' });
+            }, 7500);
         }
     
         // Disparar la animación cuando el contenedor entra en la vista
