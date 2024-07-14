@@ -12370,7 +12370,7 @@ hr+.nk-block {
 }
 
 .feature-icon-lg {
-  width: 160px;
+  width: 100px;
   margin-top: -15px;
   margin-bottom: 5px !important;
 }
@@ -13275,7 +13275,7 @@ hr+.nk-block {
   }
 
   .feature-text-s2 {
-    padding: 0 0 0 45px;
+    padding: 0 0 0 0px;
   }
 
   .feature-text-wd p {
@@ -13324,7 +13324,7 @@ hr+.nk-block {
 
 @media (min-width: 1200px) {
   .feature-text-s2 {
-    padding: 0 65px 0 45px;
+    padding: 0 0px 0 0px;
   }
 
   .feature-text-wd p {

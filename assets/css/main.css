@@ -3144,7 +3144,7 @@ h6 {
 }
 
 .feature-icon-lg {
-    width: 160px;
+    width: 100px;
     margin-top: -15px;
     margin-bottom: 5px !important;
 }
@@ -3215,7 +3215,7 @@ h6 {
 
 @media (min-width: 992px) {
     .feature-text-s2 {
-        padding: 0 0 0 45px;
+        padding: 0 0 0 0px;
     }
 
     .feature-s12 {
@@ -3225,7 +3225,7 @@ h6 {
 
 @media (min-width: 1200px) {
     .feature-text-s2 {
-        padding: 0 65px 0 45px;
+        padding: 0 65px 0 0px;
     }
 }
 

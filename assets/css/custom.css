@@ -236,7 +236,7 @@
 
 .vl {
     border-left: 6px solid var(--color4);
-    height: 200px;
+    height: 150px;
     width: 6px;
     left: 50%;
     margin: auto;
@@ -424,6 +424,14 @@ h6 {
 
 /* END POSTER  */
 
+/* AUGMENTED ADS */
+
+#augmented-ads img {
+    max-height: 500px;
+}
+
+/* END AUGMENTED ADS */
+
 
 /* VIDEOS */
 
@@ -485,6 +493,14 @@ h6 {
 }
 
 /* END VIDEO */
+
+/* WHAT IS */
+
+#what-is video {
+    max-height: 500px;
+}
+
+/* END WHAT IS */
 
 
 /* PARTNERS */
