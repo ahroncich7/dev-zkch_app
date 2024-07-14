@@ -1068,26 +1068,23 @@ kchApp = function (kchApp, $, window, document) {
                 container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
             }, 500);
             setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 2, behavior: 'smooth' });
+                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
             }, 1500);
             setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 3, behavior: 'smooth' });
+                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
             }, 2500);
             setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 4, behavior: 'smooth' });
+                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
             }, 3500);
             setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 5, behavior: 'smooth' });
+                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
             }, 4500);
             setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 6, behavior: 'smooth' });
+                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
             }, 5500);
             setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 7, behavior: 'smooth' });
+                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
             }, 6500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount * 8, behavior: 'smooth' });
-            }, 7500);
         }
     
         // Disparar la animación cuando el contenedor entra en la vista

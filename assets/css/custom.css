@@ -172,7 +172,8 @@
 #roadmap-token #scrollable-container {
     scroll-snap-type: y mandatory;
     min-height: 400px;
-    max-height: 150vh;
+    max-height: 100vh;
+    margin-top: -30px;
 
 
     --mask:
@@ -211,7 +212,7 @@
 #roadmap-token svg.arrow-down {
     position: absolute;
     width: auto;
-    bottom: 50px;
+    bottom: 45px;
     left: 50%;
     transform: translate(-50%, 0);
     -webkit-animation: arrowIntermitance 1s infinite alternate;
@@ -223,7 +224,7 @@
     position: absolute;
     height: 60px;
     width: auto;
-    top: 240px;
+    top: 45px;
     left: 50%;
     transform: translate(-50%, 0);
     -webkit-animation: arrowIntermitance 1s infinite alternate;
@@ -236,7 +237,7 @@
 
 .vl {
     border-left: 6px solid var(--color4);
-    height: 150px;
+    height: 100px;
     width: 6px;
     left: 50%;
     margin: auto;
@@ -503,6 +504,15 @@ h6 {
 /* END WHAT IS */
 
 
+/* PROBLEMS & SOLUTIONS */
+
+#ps video {
+    max-height: 400px;
+}
+
+/* END PROBLEMS & SOLUTIONS */
+
+
 /* PARTNERS */
 
 .partner-logo-s2,
@@ -543,10 +553,10 @@ h6 {
 
 @keyframes arrowIntermitance {
     0% {
-        opacity: 0.05;
+        opacity: 0.3;
     }
 
     100% {
-        opacity: 0.3;
+        opacity: 0.8;
     }
 }
