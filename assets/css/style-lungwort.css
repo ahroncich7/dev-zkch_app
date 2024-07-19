@@ -19056,7 +19056,7 @@ hr+.nk-block {
   background: var(--color3);
 }
 
-.has-fixed.is-dark .header-main {
+.has-fixed.is-dark .header-main, .is-always-fixed.is-dark .header-main  {
   background: var(--color55);
 }
 
