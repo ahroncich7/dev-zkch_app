@@ -380,6 +380,18 @@ h6 {
     font-size: 1.5rem;
 }
 
+.title-s5-dark.title-s5:after {
+    background: var(--bs-dark);
+}
+
+.title-s5-white.title-s5:after {
+    background: var(--bs-white);
+}
+
+.text-white {
+    color: var(--bs-white) !important
+}
+
 
 /* POSTER  */
 
@@ -526,6 +538,46 @@ h6 {
 /* END WHAT IS */
 
 
+/* NFTS */
+
+#nft .feature {
+    overflow: visible;
+    position: relative;
+}
+
+#nfts .feature::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, transparent, transparent, transparent, transparent, #fff, transparent, transparent, transparent, transparent);
+    background-size: 300% 100%;
+    background-position: -200% 0%;
+    opacity: 0;
+}
+
+#nfts .feature:hover::before {
+    animation: glowEffect 0.5s none;
+}
+
+.bg-golden {
+    background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+.bg-platinium {
+    background: linear-gradient(135deg, #bdbdbd, #ededed, #283048, #ededed, #bdbdbd);
+}
+
+.bg-black {
+    background: linear-gradient(135deg, #000000, #4D4855, #000000, #4D4855, #000000);
+}
+
+
+/* END NFTS */
+
+
 /* PROBLEMS & SOLUTIONS */
 
 #ps video {
@@ -563,6 +615,18 @@ h6 {
 /* ANIMATIONS */
 
 .hoverAnimated {}
+
+@keyframes glowEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        background-position: -320% 0;
+        opacity: 1;
+    }
+}
+
 
 @keyframes overColX {
     /* from {
