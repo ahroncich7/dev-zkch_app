@@ -1057,11 +1057,11 @@ kchApp = function (kchApp, $, window, document) {
         var divHeight = container.height();
         var scrollAmount = divHeight / 2;
         var currentContTop = container.scrollTop();
-    
+
         // Configuración inicial del scroll
         // container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
         container.scrollTop();
-    
+
         // Función de animación de desplazamiento
         function autoScroll() {
             setTimeout(() => {
@@ -1084,33 +1084,37 @@ kchApp = function (kchApp, $, window, document) {
             }, 5500);
             setTimeout(() => {
                 container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+
+                // CUANDO TERMINA LA ANIMACION DE ENTRADA:
+                // Manejar clics para desplazamiento manual
+                container.on('click', function (event) {
+                    currentContTop = container.scrollTop();
+                    console.log("clickkkkkkkkk")
+                    var clickY = event.offsetY;
+                    clickedScroll = true;
+                    if (clickY > divHeight / 2) {
+                        container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
+                    } else {
+                        container.get(0).scroll({ top: currentContTop - scrollAmount, behavior: 'smooth' });
+                    }
+                    clickedScroll = false;
+                });
             }, 6500);
         }
-    
+
         // Disparar la animación cuando el contenedor entra en la vista
         container.waypoint(function (direction) {
             if (direction === 'down') {
                 autoScroll();
             }
         }, { offset: '100%' });
-    
-        // Manejar clics para desplazamiento manual
-        container.on('click', function (event) {
-            currentContTop = container.scrollTop();
-            var clickY = event.offsetY;
-            clickedScroll = true;
-            if (clickY > divHeight / 2) {
-                container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
-            } else {
-                container.get(0).scroll({ top: currentContTop - scrollAmount, behavior: 'smooth' });
-            }
-            clickedScroll = false;
-        });
+
+
     };
-    
+
     // Añadir la función al array de docReady
     kchApp.components.docReady.push(kchApp.Util.roadMapAnimation);
-    
+
 
     return kchApp;
 }(kchApp, jQuery, window, document);
