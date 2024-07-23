@@ -583,8 +583,11 @@ h6 {
     background-position: -200% 0%;
     opacity: 0;
     mask-image: url(../images/ticketMask.png);
+    -webkit-mask-image: url(../images/ticketMask.png);;
     mask-size: contain;
+    -webkit-mask-size: contain;
     mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
 }
 
 .glow-effect:hover::after {
