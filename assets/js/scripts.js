@@ -207,62 +207,6 @@ kchApp = function (kchApp, $, window, document) {
     };
     kchApp.components.docReady.push(kchApp.Util.headerSticky);
 
-    // imageBG !Util @v1.0
-    // kchApp.Util.imageBG = function () {
-    //     var $imagebg = $(".bg-image");
-
-    //     if ($imagebg.exists()) {
-    //         $imagebg.each(function () {
-    //             var $this = $(this), $that = $this.parent(), overlay = $this.data('overlay'), opacity = $this.data('opacity'), image = $this.children('img').attr('src');
-    //             var overlay_type = (typeof overlay !== 'undefined' && overlay) ? overlay : false;
-    //             var opacity_value = (typeof opacity !== 'undefined' && opacity) ? opacity : false;
-
-    //             // If image found
-    //             if (typeof image !== 'undefined' && image !== '') {
-    //                 if (!$that.hasClass('has-bg-image')) {
-    //                     $that.addClass('has-bg-image');
-    //                 }
-    //                 if (overlay_type) {
-    //                     if (!$this.hasClass('overlay-' + overlay_type)) {
-    //                         $this.addClass('overlay');
-    //                         $this.addClass('overlay-' + overlay_type);
-    //                     }
-    //                 } else {
-    //                     if (!$this.hasClass('overlay-fall')) {
-    //                         $this.addClass('overlay-fall');
-    //                     }
-    //                 }
-    //                 if (opacity_value) {
-    //                     $this.addClass('overlay-opacity-' + opacity_value);
-    //                 }
-    //                 $this.css("background-image", 'url("' + image + '")').addClass('bg-image-loaded');
-    //             }
-    //         });
-    //     }
-    // };
-    // kchApp.components.docReady.push(kchApp.Util.imageBG);
-
-    // kchApp.Util.Ovm = function () {
-    //     var $elm_ovm = $('.nk-ovm'), $elm_ovm_mask = $('.nk-ovm[class*=mask]'), $ui_mask = $('[class*=ui-mask]');
-    //     if ($elm_ovm.exists()) {
-    //         $elm_ovm.each(function () {
-    //             if (!$(this).parent().hasClass('has-ovm')) { $(this).parent().addClass('has-ovm'); }
-    //         });
-    //     }
-    //     if ($elm_ovm_mask.exists()) {
-    //         $elm_ovm_mask.each(function () {
-    //             if (!$(this).parent().hasClass('has-mask')) { $(this).parent().addClass('has-mask'); }
-    //         });
-    //     }
-    //     if ($ui_mask.exists()) {
-    //         $ui_mask.each(function () {
-    //             if (!$(this).parent().hasClass('has-ovm')) { $(this).parent().addClass('has-ovm'); }
-    //         });
-    //     }
-    // };
-
-    // kchApp.components.docReady.push(kchApp.Util.Ovm);
-
     // progressBar @v1.1
     kchApp.Util.progressBar = function () {
         var $data_percent = $('[data-percent]'), $data_point = $('[data-point]');
@@ -977,53 +921,6 @@ kchApp = function (kchApp, $, window, document) {
     };
     kchApp.components.docReady.push(kchApp.Plugins.particles);
 
-    kchApp.Plugins.videoBG = function () {
-        var $videobg = $(".bg-video");
-
-        if ($videobg.exists()) {
-            $videobg.each(function () {
-                var $this = $(this), $that = $this.parent(), overlay = $this.data('overlay'), opacity = $this.data('opacity'), video = $this.data('video'), cover = $this.data('cover'),
-                    overlay_type = (typeof overlay !== 'undefined' && overlay) ? overlay : false, opacity_value = (typeof opacity !== 'undefined' && opacity) ? opacity : false, cover_value = (typeof cover !== 'undefined' && cover) ? cover : false;
-
-                if (!$that.hasClass('has-bg-video')) {
-                    $that.addClass('has-bg-video');
-                }
-
-                if (overlay_type) {
-                    if (!$this.hasClass('overlay-' + overlay_type)) {
-                        $this.addClass('overlay');
-                        $this.addClass('overlay-' + overlay_type);
-                    }
-                } else {
-                    if (!$this.hasClass('overlay-fall')) {
-                        $this.addClass('overlay-fall');
-                    }
-                }
-                if (opacity_value) {
-                    $this.addClass('overlay-opacity-' + opacity_value);
-                }
-
-                if (cover_value && kchApp.Win.width < _mobBreak) {
-                    $this.addClass('cover-enabled')
-                    $this.append('<div class="bg-video-cover" style="background-image:url(' + cover_value + ')"></div>');
-                }
-
-                if ($this.hasClass('bg-video-youtube') && !$this.hasClass('cover-enabled')) {
-                    $this.YTPlayer({
-                        fitToBackground: true,
-                        videoId: video,
-                        callback: function () {
-                            console.clear();
-                        }
-                    });
-                }
-            });
-        }
-    };
-    kchApp.components.docReady.push(kchApp.Plugins.videoBG);
-    $win.on('resize', function () {
-        kchApp.components.docReady.push(kchApp.Plugins.videoBG);
-    });
 
     // Data Tables @v100
     kchApp.Plugins.dataTable = function () {
@@ -1049,71 +946,106 @@ kchApp = function (kchApp, $, window, document) {
     kchApp.components.docReady.push(kchApp.Plugins.dataTable);
 
 
+
+    // ROADMAP
     kchApp.Util.roadMapAnimation = function () {
-        var container = $('#scrollable-container');
-        var clickedScroll = false;
-        const lastDoneStep = $('#last-done');
-        const stepTop = lastDoneStep.offset().top;
-        var divHeight = container.height();
-        var scrollAmount = divHeight / 2;
-        var currentContTop = container.scrollTop();
+        try {
+            var container = $('#scrollable-container');
+            var clickedScroll = false;
+            const lastDoneStep = $('#last-done');
+            const stepTop = lastDoneStep.offset().top;
+            var divHeight = container.height();
+            var scrollAmount = divHeight / 2;
+            var currentContTop = container.scrollTop();
 
-        // Configuración inicial del scroll
-        // container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
-        container.scrollTop();
+            // Configuración inicial del scroll
+            // container.scrollTop(stepTop - container.offset().top - (divHeight / 2));
+            container.scrollTop();
 
-        // Función de animación de desplazamiento
-        function autoScroll() {
-            setTimeout(() => {
-                container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
-            }, 500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
-            }, 1500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
-            }, 2500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
-            }, 3500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
-            }, 4500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
-            }, 5500);
-            setTimeout(() => {
-                container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+            // Función de animación de desplazamiento
+            function autoScroll() {
+                setTimeout(() => {
+                    container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
+                }, 500);
+                setTimeout(() => {
+                    container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+                }, 1500);
+                setTimeout(() => {
+                    container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+                }, 2500);
+                setTimeout(() => {
+                    container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+                }, 3500);
+                setTimeout(() => {
+                    container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+                }, 4500);
+                setTimeout(() => {
+                    container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
+                }, 5500);
+                setTimeout(() => {
+                    container.get(0).scroll({ top: container.scrollTop() + scrollAmount, behavior: 'smooth' });
 
-                // CUANDO TERMINA LA ANIMACION DE ENTRADA:
-                // Manejar clics para desplazamiento manual
-                container.on('click', function (event) {
-                    currentContTop = container.scrollTop();
-                    console.log("clickkkkkkkkk")
-                    var clickY = event.offsetY;
-                    clickedScroll = true;
-                    if (clickY > divHeight / 2) {
-                        container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
-                    } else {
-                        container.get(0).scroll({ top: currentContTop - scrollAmount, behavior: 'smooth' });
-                    }
-                    clickedScroll = false;
-                });
-            }, 6500);
-        }
-
-        // Disparar la animación cuando el contenedor entra en la vista
-        container.waypoint(function (direction) {
-            if (direction === 'down') {
-                autoScroll();
+                    // CUANDO TERMINA LA ANIMACION DE ENTRADA:
+                    // Manejar clics para desplazamiento manual
+                    container.on('click', function (event) {
+                        currentContTop = container.scrollTop();
+                        console.log("clickkkkkkkkk")
+                        var clickY = event.offsetY;
+                        clickedScroll = true;
+                        if (clickY > divHeight / 2) {
+                            container.get(0).scroll({ top: currentContTop + scrollAmount, behavior: 'smooth' });
+                        } else {
+                            container.get(0).scroll({ top: currentContTop - scrollAmount, behavior: 'smooth' });
+                        }
+                        clickedScroll = false;
+                    });
+                }, 6500);
             }
-        }, { offset: '100%' });
 
-
+            // Disparar la animación cuando el contenedor entra en la vista
+            container.waypoint(function (direction) {
+                if (direction === 'down') {
+                    autoScroll();
+                }
+            }, { offset: '100%' });
+        } catch { }
     };
 
     // Añadir la función al array de docReady
     kchApp.components.docReady.push(kchApp.Util.roadMapAnimation);
+
+
+
+    // SELECT A DIV
+
+
+    kchApp.Util.selectAnElement = function () {
+        var elements = $('.selectables');
+        elements.each(function () {
+            var selectedId;
+            var selectableList = $(this).find('[data-selectedId]').not('.disabled');
+            selectableList.each(function () {
+                $(this).on("click", function (e) {
+                    e.preventDefault();
+                    selectedId = $(this).attr("data-selectedId");
+                    selectableList.each(function () {
+                        if (selectedId == $(this).attr("data-selectedId")) {
+                            $(this).addClass("selected")
+                        } else {
+                            $(this).removeClass("selected")
+                        }
+                    })
+                })
+            })
+
+        })
+
+
+
+    }
+
+    kchApp.components.docReady.push(kchApp.Util.selectAnElement);
+
 
 
     return kchApp;
