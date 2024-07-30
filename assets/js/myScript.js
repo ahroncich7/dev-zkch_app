@@ -83,7 +83,7 @@ try{
 try{
 
     VANTA.FOG({
-        el: "#raise",
+        el: "#invest",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,

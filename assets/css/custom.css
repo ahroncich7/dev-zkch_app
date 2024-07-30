@@ -148,6 +148,29 @@
 }
 
 
+/* Chrome, Safari, Edge, Opera */
+.no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.no-arrows[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.custom-underline{
+    border-bottom: solid 5px var(--color5);
+}
+
+
 
 
 /* NAVBAR */
@@ -681,15 +704,15 @@ h6 {
 /* END BLOCK CHAIN */
 
 
-/* Raise */
+/* INVEST */
 
 
-#raise canvas{
+#invest canvas{
     height: 100%!important;
 }
 
 
-#raise .phase-container::after {
+#invest .phase-container::after {
     content: '';
     position: absolute;
     left: 0;
@@ -698,7 +721,7 @@ h6 {
     background-color: white;
 }
 
-#raise .phase-container.selected::after {
+#invest .phase-container.selected::after {
     content: '';
     position: absolute;
     left: 0;
@@ -708,19 +731,10 @@ h6 {
     box-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px rgb(187, 0, 255);
 }
 
-#raise .phase-container.selected .round {
+#invest .phase-container.selected .round {
     text-shadow: 0 0 7px #fff, 0 0 14px #fff, 0 0 21px rgb(187, 0, 255);
 }
 
-
-
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.custom-underline{
-    border-bottom: solid 5px var(--color5);
-}
 
 
 /* PROGRESS BAR */
