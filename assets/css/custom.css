@@ -316,6 +316,11 @@ h6 {
     background-image: linear-gradient(to right, var(--color23) 0%, var(--color8) 100%);
 }
 
+.btn-grad-2 {
+    background-image: linear-gradient(to right, var(--color24) 0%, var(--color57) 100%);
+    border: none;
+}
+
 .btn-grad:hover,
 .btn-grad:before {
     /* background: radial-gradient(circle at left top, var(--color2), var(--color4)); */
