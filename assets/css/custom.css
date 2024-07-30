@@ -772,6 +772,17 @@ h6 {
 /* END PRESALE */
 
 
+/* AIRDROP */
+
+#airdrop a {
+    text-decoration: underline;
+    color: var(--color11);
+    font-weight: 500;
+}
+
+/* END AIRDROP */
+
+
 
 
 /* ANIMATIONS */
