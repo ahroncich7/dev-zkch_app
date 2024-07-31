@@ -7605,7 +7605,7 @@ ul.progress-info {
 }
 
 .tc-light .countdown-s3 .countdown-time {
-  color: var(--color3);
+  color: var(--color7);
 }
 
 .countdown-s3 .countdown-time:after {
@@ -20137,7 +20137,7 @@ hr+.nk-block {
 
 .section-t-s-fixed,
 .section-s-fixed {
-  padding-top: 60px !important;
+  padding-top: 90px !important;
 }
 
 .section-b-s-fixed,
@@ -20177,7 +20177,7 @@ hr+.nk-block {
 
 .section-t,
 .section {
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .section-b,
@@ -20196,7 +20196,7 @@ hr+.nk-block {
 
   .section-t,
   .section {
-    padding-top: 60px;
+    padding-top: 90px;
   }
 
   .section-b,
@@ -20206,7 +20206,7 @@ hr+.nk-block {
 
   .section-t-s,
   .section-s {
-    padding-top: 60px !important;
+    padding-top: 90px !important;
   }
 
   .section-b-s,
