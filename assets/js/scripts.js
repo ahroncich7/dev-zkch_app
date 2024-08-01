@@ -1017,8 +1017,6 @@ kchApp = function (kchApp, $, window, document) {
 
 
     // SELECT A DIV
-
-
     kchApp.Util.selectAnElement = function () {
         var elements = $('.selectables');
         elements.each(function () {
@@ -1045,6 +1043,21 @@ kchApp = function (kchApp, $, window, document) {
     }
 
     kchApp.components.docReady.push(kchApp.Util.selectAnElement);
+
+
+    // PLAY VIDEOS
+    kchApp.Util.playVideos = function () {
+        const videoElement = document.querySelector('video');
+
+        // IOS
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            videoElement.play().catch(error => {
+                console.log("Error trying to play video:", error);
+            });
+        }
+    }
+
+    kchApp.components.winLoad.push(kchApp.Util.playVideos);
 
 
 
