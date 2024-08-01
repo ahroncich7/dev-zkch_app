@@ -12,7 +12,6 @@ var kchApp = (function (jQ, win, doc) {
     function docReady(stmt) {
         stmt = (typeof stmt === typeof undefined) ? jQ : stmt;
         components.docReady.concat(components.docReadyDefer).forEach(function (component) { component(stmt); });
-        components.preloader()
     }
 
     function winLoad(stmt) {
@@ -121,8 +120,7 @@ kchApp = function (kchApp, $, window, document) {
             $preloader.delay(600).fadeOut(300);
         }
     };
-    // kchApp.components.winLoad.push(kchApp.Util.preLoader);
-    kchApp.components.preloader = kchApp.Util.preLoader;
+    kchApp.components.winLoad.push(kchApp.Util.preLoader);
 
     // // BackTop !Util @v1.0
     // kchApp.Util.backTop = function () {
